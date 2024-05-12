@@ -24,8 +24,11 @@
 <body>
     <div class="container">
 
-        {% block menu %}
-        {% endblock menu %}
+        <title>
+            {% block title %}
+            {{ title|capfirst }}
+            {% endblock title %}
+        </title>
 
         <div class="content">
         {% block content %}
