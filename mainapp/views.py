@@ -10,4 +10,4 @@ def products(request):
 
 
 def contact(request):
-    return render(request, "mainapp/contact")
+    return render(request, "mainapp/contact.html")
