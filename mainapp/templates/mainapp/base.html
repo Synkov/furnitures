@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <title>
         {% block title %}
-        {{ title }}
+        {{ title|capfirst }}
         {% endblock title %}
     </title>
 
@@ -24,11 +24,8 @@
 <body>
     <div class="container">
 
-        <title>
-            {% block title %}
-            {{ title|capfirst }}
-            {% endblock title %}
-        </title>
+        {% block menu %}
+        {% endblock menu %}
 
         <div class="content">
         {% block content %}
