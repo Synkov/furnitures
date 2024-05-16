@@ -7,6 +7,7 @@ from .models import Product, ProductCategory
 
 def main(request):
     title = "главная"
+
     products = Product.objects.all()
 
     content = {"title": title, "products": products, "media_url": settings.MEDIA_URL}
@@ -17,7 +18,6 @@ def products(request, pk=None):
     title = "продукты"
     links_menu = ProductCategory.objects.all()
     same_products = Product.objects.all()
-
     content = {
         "title": title,
         "links_menu": links_menu,
@@ -26,7 +26,6 @@ def products(request, pk=None):
     }
     if pk:
         print(f"User select category: {pk}")
-
     return render(request, "mainapp/products.html", content)
 
 
